@@ -4,7 +4,7 @@ const isAccelerator = require('electron-is-accelerator');
 
 const globalShortcut = electron.globalShortcut;
 const BrowserWindow = electron.BrowserWindow;
-const app = electron.app;
+const app = electron.app || electron.remote.app;
 const windowsWithShortcuts = new WeakMap();
 
 // a placeholder to register shortcuts
